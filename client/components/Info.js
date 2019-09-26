@@ -2,24 +2,14 @@ import React, { Component } from 'react';
 import { sendMessage } from '../store';
 import { connect } from 'react-redux';
 import { WindoW, Block, Flex } from '../sub-components/containers';
+import Hours from '../sub-components/unique/Hours';
+import Blurb from '../sub-components/unique/Blurb';
 
 class Info extends Component {
-  state = { name: '', email: '', message: '' };
-
-  handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
-
-  handleSubmit = event => {
-    event.preventDefault();
-    this.props.sendMessage(this.state);
-  };
-
   render() {
-    const { email, name, message } = this.state;
     return (
-      <WindoW padding="py-50px" background="background-secondary">
-        <Flex padding="py-50px" row space>
+      <WindoW backgroundUrl="https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/marias-back.png?alt=media&token=e3c66a2a-3be8-44a7-a85a-b2b9f25bbe4c" column background="background-secondary">
+        <div className="flex row wrap align-center justify-center w-100 my-30px">
           <Block
             column
             type="info-card"
@@ -31,13 +21,7 @@ class Info extends Component {
             <h4 className="headline-4 color-secondary p-20px">
               Marias's Pizza Palace
             </h4>
-
-            <span className="body-1 color-secondary p-20px">
-              We offer dine-in, carry outs as well as pizza parties and catering
-              services. Get your piping hot pizza fresh from the oven! Give us a
-              call at 860-267-8722 to place your order or enjoy at home. Or come
-              visit us at the address below:
-            </span>
+            <Blurb />
           </Block>
           <Block
             column
@@ -47,54 +31,18 @@ class Info extends Component {
             width="w-90"
             full
           >
-            <h4 className="headline-4 color-secondary p-20px">Hours</h4>
-
-            <span className="body-1 p-10px color-secondary">Mon: Closed</span>
-            <span className="body-1 p-10px color-secondary">
-              Tue - Wed: 11:00AM - 9:30 PM
-            </span>
-
-            <span className="body-1 p-10px color-secondary">
-              Thur: 11:00AM - 10:00PM
-            </span>
-            <span className="body-1 p-10px color-secondary">
-              Fri 7:00AM - 10:00PM
-            </span>
-            <span className="body-1 p-10px color-secondary">
-              Sat - Sun: 7:00AM - 9:30PM
-            </span>
+            <Hours />
           </Block>
-        </Flex>
-        <form
-          onSubmit={this.handleSubmit}
-          className="flex column align-center justify-center"
-        >
-          <input
-            name="name"
-            placeholder="Name"
-            value={name}
-            onChange={this.handleChange}
-            className="textfield m-10px"
+        </div>
+        <div className="flex row wrap align-center justify-center w-100 my-30px">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.96376616092!2d-72.41659738425795!3d41.5456063941341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e6413d6be6cb43%3A0x7ddc6879cdfbb59e!2sMaria&#39;s%20Pizza!5e1!3m2!1sen!2sus!4v1569513574593!5m2!1sen!2sus"
+            className="info__map "
+            frameBorder="0"
+            // style="border:0;"
+            allowFullScreen=""
           />
-          <input
-            placeholder="Email"
-            name="email"
-            value={email}
-            onChange={this.handleChange}
-            className="textfield m-10px"
-          />
-
-          <textarea
-            placeholder="Message"
-            name="message"
-            value={message}
-            onChange={this.handleChange}
-            className="textfield multi m-10px"
-          />
-          <button type="submit" className="button">
-            Send Message
-          </button>
-        </form>
+        </div>
       </WindoW>
     );
   }

@@ -1,7 +1,7 @@
 @import './color.scss';
 
 #nav {
-  height: 80px;
+  height: auto;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px,
     rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
   background: $color-primary;
@@ -89,10 +89,11 @@
 }
 
 .nav__logo {
-  width: 400px;
-  object-fit: contain;
-  height: 70px;
-  margin: 5px;
+
+}
+
+.nav__logo__img {
+  width: 90px;
 }
 
 .nav__logo-text {
@@ -124,14 +125,14 @@
 }
 
 .selected {
-  border-top: 2px solid $color-secondary;
-  border-bottom: 2px solid $color-secondary;
+  border: 2px solid $color-secondary;
+  border-radius: 5px;
   transition: all 0.3s;
 }
 
 .nav__link:hover {
-  border-top: 2px solid $color-secondary;
-  border-bottom: 2px solid $color-secondary;
+  border: 2px solid $color-secondary;
+  border-radius: 5px;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -141,6 +142,12 @@
     display: none;
   }
 
+  .nav__logo-text {
+    display: none;
+  }
+  .nav__logo {
+    display: none;
+  }
   .open {
     height: 390px;
   }

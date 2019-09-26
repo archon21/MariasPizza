@@ -5,3 +5,28 @@
     color: $color-tirciary;
     width: 100vw;
 }
+
+.footer__blurb__map{
+    width: 200px;
+    height: 200px;
+    border-radius: 999px;
+    position: relative;
+    border: 4px solid white;
+    margin: 10px 0;
+
+}
+
+.footer__blurb__map__link {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 999px;
+    top: 0;
+    left: 0;
+}
+
+.footer__blurb__map__iframe {
+    width: 200px!;
+    height: 200px;
+    border-radius: 999px!important;
+}

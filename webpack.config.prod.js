@@ -40,38 +40,32 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              includePaths: [path.resolve('./node_modules'), './src/scss']
+              includePaths: [path.resolve('./node_modules'), './public/scss']
             }
           }
         ]
       },
-      {
-        test: /\.svg$/,
-        loader: 'svg-loader'
-      },
-      {
-        test: /\.(png|gif|jpg|jpeg|eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader'
-      }
-    ]
-  },
-  optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: false // set to true if you want JS source maps
 
-      }),
-      new OptimizeCSSAssetsPlugin({
-        cssProcessorOptions: {
-          discardComments: {
-            removeAll: true
-          }
-        }
-      })
+
     ]
   },
+  // optimization: {
+  //   minimizer: [
+  //     new UglifyJsPlugin({
+  //       cache: true,
+  //       parallel: true,
+  //       sourceMap: false // set to true if you want JS source maps
+
+  //     }),
+  //     new OptimizeCSSAssetsPlugin({
+  //       cssProcessorOptions: {
+  //         discardComments: {
+  //           removeAll: true
+  //         }
+  //       }
+  //     })
+  //   ]
+  // },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/style.css'
@@ -84,6 +78,5 @@ module.exports = {
       threshold: 10240,
       minRatio: 0.8
     }),
-    new CopyWebpackPlugin(['./static'])
   ]
 };

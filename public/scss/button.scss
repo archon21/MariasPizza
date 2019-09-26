@@ -45,6 +45,19 @@
 
 .button:hover {
   transition: all 0.4s;
+  color: $color-secondary;
+  background: $color-primary;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+  0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.inverted {
+  background: $color-secondary!important;
+  color: $color-primary!important;
+}
+
+.inverted:hover {
+  transition: all 0.4s;
   color: $color-primary;
   background: $color-secondary;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),

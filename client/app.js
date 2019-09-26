@@ -14,6 +14,9 @@ class App extends Component {
   };
   async componentDidMount() {
     await this.props.willReadDB('updates');
+    await this.props.willReadDB('specials');
+    await this.props.willReadDB('images');
+    await this.props.willReadDB('specialsMenu');
     this.setState({ mounted: true });
 
   }
@@ -22,7 +25,7 @@ class App extends Component {
     const { alertStatus, alertTemplate } = this.props;
     return mounted ? (
       <div>
-        <Fab
+        {/* <Fab
           options={[
             {
               name: 'meeting_room',
@@ -46,7 +49,7 @@ class App extends Component {
             }
 
           ]}
-        />
+        /> */}
         <Alert
           open={alertStatus}
           template={alertTemplate}

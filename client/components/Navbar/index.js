@@ -28,21 +28,46 @@ class Navbar extends Component {
   };
 
   selectLink = link => {
-    console.log(link);
+
     this.setState({ selectedLink: link });
   };
 
   render() {
     const { open, selectedLink } = this.state;
+    const { phone } = this.props;
     return (
-      <nav id="nav" className="flex row wrap black align-center">
+      <nav
+        id="nav"
+        className="flex row wrap black align-center justify-space-evenly py-5px"
+      >
+        <Link to="/" className="nav__logo flex row align-center">
+          <img
+            className="nav__logo__img"
+            src="https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/logos%2FStatues.png?alt=media&token=6af4ad71-3964-443c-a465-abde85eab9d0"
+          />
+          <div className="flex column ">
+            <span className="nav__logo-text">Marias Pizza Palace</span>
+            <span className="body-2 color-white">744 MIDDLETOWN RD.</span>
+            <span className="body-2 color-white">COLCHESTER, CT</span>
+            <span className="body-2 color-white">{phone}</span>
+          </div>
+        </Link>
+
         <Link
-          className={`headline-6 p-5px nav__link ${selectedLink === 'home' &&
+          className={`headline-6 p-5px nav__link ${selectedLink === 'home' || selectedLink === '' &&
             'selected'}`}
           to={{ pathname: '/home' }}
           onClick={() => this.selectLink('home')}
         >
           HOME
+        </Link>
+        <Link
+          className={`headline-6 p-5px nav__link ${selectedLink === 'specials' &&
+            'selected'}`}
+          to={{ pathname: '/specials' }}
+          onClick={() => this.selectLink('specials')}
+        >
+          SPECIALS
         </Link>
         <Link
           className={`headline-6  p-5px nav__link ${selectedLink === 'menu' &&
@@ -52,6 +77,7 @@ class Navbar extends Component {
         >
           MENU
         </Link>
+
         <Link
           className={`headline-6  p-5px nav__link ${selectedLink === 'info' &&
             'selected'}`}
@@ -65,6 +91,10 @@ class Navbar extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  phone: state.init.phone
+});
+
 const mapDispatchToProps = dispatch => ({
   alertInteraction: (status, template) =>
     dispatch(alertInteraction(status, template))
@@ -72,7 +102,7 @@ const mapDispatchToProps = dispatch => ({
 
 export default withRouter(
   connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
   )(Navbar)
 );
