@@ -114,6 +114,17 @@ class Home extends Component {
             </svg>
           </a>
 
+          <span className=" body-1 cursive ">or</span>
+          <a
+            href="https://order.metispro.com/mariapizza"
+            target="_blank"
+            className="flex row wrap justify-center align-center"
+          >
+            <h5 className="headline-4 cursive color-primary">
+              Click here for Online Ordering!
+            </h5>
+          </a>
+
           <Social />
         </Divider>
         <WindoW
@@ -134,7 +145,10 @@ class Home extends Component {
           <h1 className="headline-3 cursive">What We Offer</h1>
         </Divider>
         <WindoW backgroundUrl="https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/stock-counter.jpg?alt=media&token=ac0f9b82-9094-418c-9502-3195e1c0c6f7">
-          <div className='flex row align-center wrap justify-center' style={{ width: '90%' }}>
+          <div
+            className="flex row align-center wrap justify-center"
+            style={{ width: '90%' }}
+          >
             {specials.map((s, index) => {
               console.log(s);
               return index !== 0 ? (

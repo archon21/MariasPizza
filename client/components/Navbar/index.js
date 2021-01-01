@@ -95,27 +95,19 @@ class Navbar extends Component {
           style={{ minHeight: '80px' }}
           className="w-100 flex column align-center justify-center background-mimosa"
         >
-          <div style={{width:'90%', padding: '10px 0'}} className='flex column align-center justify-center'>
-
-         
-          <span className="body-1 color-primary text-center">
-            <strong>Due to COVID-19 Our hours have changed</strong>
-          </span>
-          <span className="body-1 color-primary text-center">
-            <strong>
-              THANK YOU FOR YOUR SUPPORT DURING THIS TIME! WE DO HAVE ADJUSTED
-              HOURS BUT ARE SERVING A FULL MENU!
-            </strong>
-          </span>
-          <span style={{margin:'10px 0'}} className="body-1 text-center color-primary">
-            <a
-              className=" online-ordering-link text-center my-10px"
-              href="https://order.metispro.com/mariapizza"
-              target="_blank"
-            >
-              <strong> Click here for Online Ordering!</strong>
-            </a>
-          </span>
+          <div
+            style={{ width: '90%', padding: '10px 0' }}
+            className="flex column align-center justify-center"
+          >
+            <span className="body-1 color-primary text-center">
+              <strong>Due to COVID-19 Our hours have changed</strong>
+            </span>
+            <span className="body-1 color-primary text-center">
+              <strong>
+                THANK YOU FOR YOUR SUPPORT DURING THIS TIME! WE DO HAVE ADJUSTED
+                HOURS BUT ARE SERVING A FULL MENU!
+              </strong>
+            </span>
           </div>
         </div>
       </Fragment>
