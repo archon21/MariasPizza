@@ -5,16 +5,16 @@ class Menu extends Component {
   state = {
     selectedMenus: [],
     breakfastMenu: [
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FBreakfast%20Page%201.jpg?alt=media&token=df6e1941-7ff4-4b1e-be5c-a704f589dfdc',
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FBreakfast%202-page-001.jpg?alt=media&token=033b3a2e-03e0-4e4d-b6a8-4a9ca7f49ca3'
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FBreakfast%2Fbreakfast_1.jpg?alt=media&token=df8fe6af-2f3c-42b8-9bf3-80a46d77cfb4',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FBreakfast%2Fbreakfast_2.jpg?alt=media&token=b84fb232-a6f4-4802-927d-fc712aae22e0'
     ],
     lunchMenu: [
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2FLunch-page-004.jpg?alt=media&token=f0b3d2b5-2f9b-4892-b42b-738a305f7c8d',
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2FLunch-page-001.jpg?alt=media&token=ac602ffb-c533-493e-aee1-2b7de3124c51',
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2FLunch-page-002.jpg?alt=media&token=19d3f5c8-da02-41f7-875e-80a60e32bde8',
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2FLunch-page-003.jpg?alt=media&token=bdd6b4d4-f99e-412a-b003-5407f7127e0e',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch_2.jpg?alt=media&token=8b652bec-1760-46e0-9538-00caaed33dde',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch_1.jpg?alt=media&token=b3ecaed9-56a1-469b-b2fa-ae13b527907e',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch_3.jpg?alt=media&token=a4a1527f-500c-42af-b00c-a18258ed686e',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch_4.jpg?alt=media&token=34ecc1a7-bd8b-4b31-a653-1ca603ec13a2',
 
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2FDinner-page-001.jpg?alt=media&token=797bfa1e-584a-4035-a5a3-cbfb587a5a8d'
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch_5.jpg?alt=media&token=11283c07-aea2-4a6d-965a-e5d7cb218c4b'
     ]
   };
 

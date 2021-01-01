@@ -9,7 +9,7 @@ const PizzaSpecials = () => {
         <span className="headline-5 margin-0 p-10px color-primary underlined">
           2 LARGE 1 TOPPING PIZZAS
         </span>
-        <span className="headline-4 margin-0 p-10px color-primary">$26.95</span>
+        <span className="headline-4 margin-0 p-10px color-primary">$29.95</span>
         <span className="body-2 color-primary">Some exceptions apply</span>
 
         <span className="body-1  color-primary">--------------</span>

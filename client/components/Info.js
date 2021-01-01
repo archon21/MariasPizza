@@ -27,7 +27,7 @@ class Info extends Component {
             column
             type="info-card"
             maxWidth="maxw-400px"
-            height="h-500px"
+            height="h-550px"
             width="w-90"
             full
           >

@@ -153,6 +153,15 @@ button:focus {
   transition: opacity 0.1s !important;
 }
 
+.online-ordering-link {
+  color: $color-primary;
+  font-size: 25px;
+  transition: all 300ms ease-in-out;
+}
+.online-ordering-link:hover {
+  color: #fff;
+}
+
 .fade--out--fast {
   opacity: 0 !important;
   transition: opacity 0.1s;
@@ -406,14 +415,11 @@ button:focus {
 .hours__item {
   display: flex;
   flex-direction: row;
-
 }
 
 .hours__item__day {
   font-size: 2.5em;
-  margin: 5px!important;
-
-
+  margin: 5px !important;
 }
 
 .hours__border {

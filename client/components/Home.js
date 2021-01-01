@@ -6,7 +6,7 @@ import {
   WindoW,
   Flex,
   Divider,
-  Animator
+  Animator,
 } from '../sub-components/containers';
 import { Video, Fab, List, Table, Carousel } from '../sub-components';
 import Hours from '../sub-components/unique/Hours';
@@ -15,7 +15,7 @@ import Social from '../sub-components/unique/Social';
 
 class Home extends Component {
   state = {
-    scrolled: 0
+    scrolled: 0,
   };
   aboutBlock = React.createRef();
   aboutPicture = React.createRef();
@@ -29,7 +29,7 @@ class Home extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll = e => {
+  handleScroll = (e) => {
     this.setState({ scrolled: window.pageYOffset });
   };
 
@@ -134,14 +134,24 @@ class Home extends Component {
           <h1 className="headline-3 cursive">What We Offer</h1>
         </Divider>
         <WindoW backgroundUrl="https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/stock-counter.jpg?alt=media&token=ac0f9b82-9094-418c-9502-3195e1c0c6f7">
-          <Carousel
-            contain
-            maxHeight="maxh-100vh"
-            height="h-800px"
-            width="w-70"
-            items={specials}
-
-          />
+          <div className='flex row align-center wrap justify-center' style={{ width: '90%' }}>
+            {specials.map((s, index) => {
+              console.log(s);
+              return index !== 0 ? (
+                <img
+                  style={{
+                    width: '325px',
+                    height: '325px',
+                    objectFit: 'cover',
+                    margin: '5px',
+                  }}
+                  src={s.image}
+                ></img>
+              ) : (
+                <div></div>
+              );
+            })}
+          </div>
         </WindoW>
 
         <Divider
@@ -153,10 +163,9 @@ class Home extends Component {
         </Divider>
         <WindoW
           row
-
           backgroundUrl="https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/marias-background.png?alt=media&token=af3eb9a9-1906-4873-a881-410d2bac3d20"
         >
-          {updates.map(update => {
+          {updates.map((update) => {
             return (
               <Block
                 key={update.title}
@@ -170,7 +179,7 @@ class Home extends Component {
                 <h4 className="headline-4 color-secondary p-20px w-90">
                   {update.title}
                 </h4>
-                {update.body.map(bodyItem => {
+                {update.body.map((bodyItem) => {
                   return (
                     <span
                       key={bodyItem}
@@ -246,11 +255,11 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   updates: state.firebase.updates,
   specials: state.firebase.specials,
   phone: state.init.phone,
-  gallery: state.firebase.images[2].images
+  gallery: state.firebase.images[2].images,
 });
 
 export default connect(mapStateToProps)(Home);
