@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   Block,
   WindoW,
   Flex,
   Divider,
   Animator,
-} from '../sub-components/containers';
-import { Video, Fab, List, Table, Carousel } from '../sub-components';
-import Hours from '../sub-components/unique/Hours';
-import PizzaSpecials from '../sub-components/unique/PizzaSpecials';
-import Social from '../sub-components/unique/Social';
+} from "../sub-components/containers";
+import { Video, Fab, List, Table, Carousel } from "../sub-components";
+import Hours from "../sub-components/unique/Hours";
+import PizzaSpecials from "../sub-components/unique/PizzaSpecials";
+import Social from "../sub-components/unique/Social";
 
 class Home extends Component {
   state = {
@@ -23,10 +23,10 @@ class Home extends Component {
   charity3 = React.createRef();
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   }
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   handleScroll = (e) => {
@@ -39,7 +39,7 @@ class Home extends Component {
     const { scrolled } = state;
 
     return (
-      <div style={{ overflowX: 'hidden' }} className="flex column align-center">
+      <div style={{ overflowX: "hidden" }} className="flex column align-center">
         <Divider
           border
           backgroundColor="background-secondary"
@@ -53,7 +53,7 @@ class Home extends Component {
             className="flex row wrap justify-center align-center"
           >
             <h5 className="headline-4 cursive color-mimosa">
-              Order from home with Füd Delivery{' '}
+              Order from home with Füd Delivery{" "}
             </h5>
             <svg
               className="icon__fud"
@@ -115,14 +115,15 @@ class Home extends Component {
           </a>
 
           <span className=" body-1 cursive ">or</span>
+
+          <h5 className="headline-4 cursive color-primary">
+            Click below for Online Ordering!
+          </h5>
           <a
-            href="https://order.metispro.com/mariapizza"
+            href="https://slicelife.com/restaurants/ct/colchester/06415/maria-s-pizza-744-middletown-rd-colchester/menu?utm_campaign=order_now_button&utm_medium=referral&utm_source=mariaspizzapalace.com"
             target="_blank"
-            className="flex row wrap justify-center align-center"
           >
-            <h5 className="headline-4 cursive color-primary">
-              Click here for Online Ordering!
-            </h5>
+            <img src="https://slicelink-assets-production.imgix.net/partner-buttons/slice-button-medium-red-start-order.png" />
           </a>
 
           <Social />
@@ -147,17 +148,17 @@ class Home extends Component {
         <WindoW backgroundUrl="https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/stock-counter.jpg?alt=media&token=ac0f9b82-9094-418c-9502-3195e1c0c6f7">
           <div
             className="flex row align-center wrap justify-center"
-            style={{ width: '90%' }}
+            style={{ width: "90%" }}
           >
             {specials.map((s, index) => {
               console.log(s);
               return index !== 0 ? (
                 <img
                   style={{
-                    width: '325px',
-                    height: '325px',
-                    objectFit: 'cover',
-                    margin: '5px',
+                    width: "325px",
+                    height: "325px",
+                    objectFit: "cover",
+                    margin: "5px",
                   }}
                   src={s.image}
                 ></img>

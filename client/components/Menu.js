@@ -5,16 +5,16 @@ class Menu extends Component {
   state = {
     selectedMenus: [],
     breakfastMenu: [
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FBreakfast%2Fbreakfast_1.jpg?alt=media&token=df8fe6af-2f3c-42b8-9bf3-80a46d77cfb4',
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FBreakfast%2Fbreakfast_2.jpg?alt=media&token=b84fb232-a6f4-4802-927d-fc712aae22e0',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FBreakfast%2Fbreakfast1.jpg?alt=media&token=4ac46721-b9b2-480c-8997-dbfee2425350',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FBreakfast%2Fbreakfast2.jpg?alt=media&token=fdbbd318-104d-4bf9-b671-715b2d404252',
     ],
     lunchMenu: [
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch_2.jpg?alt=media&token=8b652bec-1760-46e0-9538-00caaed33dde',
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch_1.jpg?alt=media&token=b3ecaed9-56a1-469b-b2fa-ae13b527907e',
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch_3.jpg?alt=media&token=a4a1527f-500c-42af-b00c-a18258ed686e',
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch_4.jpg?alt=media&token=34ecc1a7-bd8b-4b31-a653-1ca603ec13a2',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch1.jpg?alt=media&token=5f6d29c0-034a-4cf7-853b-c9013731c7e2',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch2.jpg?alt=media&token=4c550a62-a058-4444-98c9-39f3dc1b4c2a',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch3.jpg?alt=media&token=7ec04394-7baa-4b85-b53a-4a6854bd38db',
+      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch4.jpg?alt=media&token=54273af7-1795-42f1-8324-70d5d985e907',
 
-      'https://firebasestorage.googleapis.com/v0/b/mariaspizza.appspot.com/o/menus%2FLunch%20and%20Dinner%2Flunch_5.jpg?alt=media&token=11283c07-aea2-4a6d-965a-e5d7cb218c4b',
+
     ],
   };
 
@@ -104,16 +104,7 @@ class Menu extends Component {
             </svg>
           </a>
 
-          <span className=" body-1 cursive ">or</span>
-          <a
-            href="https://order.metispro.com/mariapizza"
-            target="_blank"
-            className="flex row wrap justify-center align-center"
-          >
-            <h5 className="headline-4 cursive color-primary">
-              Click here for Online Ordering!
-            </h5>
-          </a>
+        
         </Divider>
         <Flex row>
           <button

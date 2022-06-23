@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { alertInteraction } from '../store';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { alertInteraction } from "../store";
 
 class Alert extends Component {
   state = {
@@ -31,10 +31,20 @@ class Alert extends Component {
     return open ? (
       <div className="alert flex align-center justify-center">
         <div className="alert__catcher" onClick={this.props.alertInteraction} />
-        <div
-          style={customStyle && customStyle}
-          className="alert__container"
-        >
+        <div style={customStyle && customStyle} className="alert__container">
+          <i
+          onClick={() => alertInteraction(false, <div></div>)}
+            className="material-icons color-white"
+            style={{
+              position: "fixed",
+              top: "15px",
+              right: "15px",
+              fontSize: "45px",
+              cursor: 'pointer'
+            }}
+          >
+            close
+          </i>
           {template && template}
         </div>
       </div>
@@ -44,11 +54,8 @@ class Alert extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  alertInteraction: () => dispatch(alertInteraction(false))
+const mapDispatchToProps = (dispatch) => ({
+  alertInteraction: () => dispatch(alertInteraction(false)),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Alert);
+export default connect(null, mapDispatchToProps)(Alert);

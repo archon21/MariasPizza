@@ -1,19 +1,19 @@
-import React, { Component, Fragment } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import NavHButton from './NavHButton';
-import { alertInteraction } from '../../store';
-import { connect } from 'react-redux';
-import Contact from '../Contact';
+import React, { Component, Fragment } from "react";
+import { Link, withRouter } from "react-router-dom";
+import NavHButton from "./NavHButton";
+import { alertInteraction } from "../../store";
+import { connect } from "react-redux";
+import Contact from "../Contact";
 
 class Navbar extends Component {
   state = {
     open: true,
-    selectedLink: '',
+    selectedLink: "",
   };
 
   componentDidMount() {
     const { pathname } = this.props.location;
-    const arr = pathname.split('/');
+    const arr = pathname.split("/");
     const selectedLink = arr[arr.length - 1];
     this.setState({ selectedLink });
   }
@@ -55,58 +55,52 @@ class Navbar extends Component {
 
           <Link
             className={`headline-6 p-5px nav__link ${
-              selectedLink === 'home' || (selectedLink === '' && 'selected')
+              selectedLink === "home" || (selectedLink === "" && "selected")
             }`}
-            to={{ pathname: '/home' }}
-            onClick={() => this.selectLink('home')}
+            to={{ pathname: "/home" }}
+            onClick={() => this.selectLink("home")}
           >
             HOME
           </Link>
           <Link
             className={`headline-6 p-5px nav__link ${
-              selectedLink === 'specials' && 'selected'
+              selectedLink === "specials" && "selected"
             }`}
-            to={{ pathname: '/specials' }}
-            onClick={() => this.selectLink('specials')}
+            to={{ pathname: "/specials" }}
+            onClick={() => this.selectLink("specials")}
           >
             SPECIALS
           </Link>
           <Link
             className={`headline-6  p-5px nav__link ${
-              selectedLink === 'menu' && 'selected'
+              selectedLink === "menu" && "selected"
             }`}
-            to={{ pathname: '/menu' }}
-            onClick={() => this.selectLink('menu')}
+            to={{ pathname: "/menu" }}
+            onClick={() => this.selectLink("menu")}
           >
             MENU
           </Link>
 
           <Link
             className={`headline-6  p-5px nav__link ${
-              selectedLink === 'info' && 'selected'
+              selectedLink === "info" && "selected"
             }`}
-            to={{ pathname: '/info' }}
-            onClick={() => this.selectLink('info')}
+            to={{ pathname: "/info" }}
+            onClick={() => this.selectLink("info")}
           >
             INFO
           </Link>
         </nav>
         <div
-          style={{ minHeight: '80px' }}
+          style={{ minHeight: "80px" }}
           className="w-100 flex column align-center justify-center background-mimosa"
         >
           <div
-            style={{ width: '90%', padding: '10px 0' }}
+            style={{ width: "90%", padding: "10px 0" }}
             className="flex column align-center justify-center"
           >
             <span className="body-1 color-primary text-center">
-              <strong>Due to COVID-19 Our hours have changed</strong>
-            </span>
-            <span className="body-1 color-primary text-center">
-              <strong>
-                THANK YOU FOR YOUR SUPPORT DURING THIS TIME! WE DO HAVE ADJUSTED
-                HOURS BUT ARE SERVING A FULL MENU!
-              </strong>
+              <strong>Now Serving Breakfast Tuesday - Sunday</strong>
             </span>
           </div>
         </div>

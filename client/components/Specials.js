@@ -81,16 +81,7 @@ class Specials extends Component {
             </svg>
           </a>
 
-          <span className=" body-1 cursive ">or</span>
-          <a
-            href="https://order.metispro.com/mariapizza"
-            target="_blank"
-            className="flex row wrap justify-center align-center"
-          >
-            <h5 className="headline-4 cursive color-primary">
-              Click here for Online Ordering!
-            </h5>
-          </a>
+         
         </Divider>
         <div className="flex row wrap align-center justify-center w-100 py-50px">
           <div className="specials flex column align-center">
